@@ -13,9 +13,13 @@ const getSumBtn = document.createElement("button");
             prices.forEach(priceElement => {
                 totalSum += parseInt(priceElement.textContent);
             });
+                const para = document.createElement("p");
+					para.innerText = "Total Price: Rs " + totalSum
+				     para.id = "ans";
 
+						document.body.appendChild(para);
             // Display the total sum in an alert box
-            alert("Total Price: Rs " + totalSum);
+			
         };
 
         getSumBtn.addEventListener("click", getSum);
